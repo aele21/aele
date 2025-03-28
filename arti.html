@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة الصحة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #218838;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            margin-top: 20px;
+        }
+        .article {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>مدونة الصحة</header>
+    <nav>
+        <a href="#">الرئيسية</a>
+        <a href="#">المقالات</a>
+        <a href="#">اتصل بنا</a>
+    </nav>
+    <div class="container">
+        <h2>أحدث المقالات</h2>
+        <p>مرحبًا بك في مدونتنا الصحية حيث نقدم لك أحدث المقالات والمعلومات حول الصحة والتغذية.</p>
+        <button onclick="addArticle()">إضافة مقال جديد</button>
+        <div id="articles"></div>
+    </div>
+    <footer>
+        &copy; 2025 مدونة الصحة - جميع الحقوق محفوظة
+    </footer>
+    <script>
+        function addArticle() {
+            let article = document.createElement("div");
+            article.className = "article";
+            
+            let title = document.createElement("h3");
+            title.innerText = "EPILEPSY";
+            
+            let intro = document.createElement("p");
+            intro.innerText = "Epilepsy is a long-term (chronic) disease that causes repeated seizures due to abnormal electrical signals produced by damaged brain cells. A burst of uncontrolled electrical activity within brain cells causes . Epilepsy is also called a seizure disorde";
+            
+            let content = document.createElement("p");
+            content.innerText = "The inhibitory transmitter gamma - aminobutyric acid (GABA) is particularly important, acting on ion channels to improve chloride inflow and reducing the chances of action potential formation, Excitatory amino acids glutamate and aspartate) allow influx of sodium and calcium, producing the opposite effect, It is likely that many seizures result from an imbalance between this excitation and inhibition . ";
+            
+            let conclusion = document.createElement("p");
+            conclusion.innerText = "Preventing head injury, for example by reducing falls, traffic accidents and sports injuries, is the most effective way to prevent post-traumatic epilepsy";
+            
+            article.appendChild(title);
+            article.appendChild(intro);
+            article.appendChild(content);
+            article.appendChild(conclusion);
+            
+            document.getElementById("articles").appendChild(article);
+        }
+    </script>
+</body>
+</html>
